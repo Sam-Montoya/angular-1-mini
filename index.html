@@ -15,8 +15,13 @@
         <button ng-click='addFriend(newFriend)'>Add!</button>
     </div>
 
+    <div>
+        <h1>Search a Fwiend!</h1>
+        <input type='text' ng-model='searchInput' />
+    </div>
+
     <h1>My Friends</h1>
-    <div ng-repeat='friend in friends'>
+    <div ng-repeat='friend in friends | filter: searchInput'>
         <p>{{ friend }}</p>
     </div>
 
